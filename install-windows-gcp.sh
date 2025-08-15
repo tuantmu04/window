@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# wget -qO- https://raw.githubusercontent.com/tuantmu04/window/refs/heads/main/install-windows-gcp.sh | sudo bash
+# wget -qO- https://raw.githubusercontent.com/ngxson/public-assets/main/install-windows-gcp.sh | sudo bash
 
 IMAGE_URL="https://huggingface.co/tuannd041/window/resolve/main/windows2012r2.raw.gz"
 
@@ -57,4 +57,3 @@ echo ""
 echo "    === ALL DONE ==="
 echo ""
 echo ""
-
