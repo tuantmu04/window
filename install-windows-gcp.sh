@@ -2,7 +2,7 @@
 
 # wget -qO- https://raw.githubusercontent.com/ngxson/public-assets/main/install-windows-gcp.sh | sudo bash
 
-IMAGE_URL="https://huggingface.co/tuannd041/window/resolve/main/windows2012r2.raw.gz"
+IMAGE_URL="http://drive.muavps.net/file/Windows2012r2UEFI.gz"
 
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
