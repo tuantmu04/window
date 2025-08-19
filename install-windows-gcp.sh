@@ -2,7 +2,7 @@
 
 # wget -qO- https://raw.githubusercontent.com/ngxson/public-assets/main/install-windows-gcp.sh | sudo bash
 
-IMAGE_URL="http://drive.muavps.net/file/Windows2012r2UEFI.gz"
+IMAGE_URL="https://archive.org/download/windows4vpsisorecoverrrq11/windows10.gz"
 
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
@@ -17,7 +17,7 @@ echo "    DOWNLOADING WINDOWS IMAGE FILE..."
 echo ""
 echo ""
 
-wget -O windows.raw.gz $IMAGE_URL
+wget -O windows10.gz $IMAGE_URL
 
 # get all block devices, sort by SIZE to get the biggest device
 DESTINATION_DEVICE="$(lsblk -x SIZE -o NAME,SIZE | tail -n1 | cut -d ' ' -f 1)"
@@ -40,7 +40,7 @@ echo ""
 # then, use dd to copy image
 echo "Destination device is $DESTINATION_DEVICE"
 echo "Running dd command..."
-pigz -dc ./windows.raw.gz | sudo dd of="/dev/$DESTINATION_DEVICE" bs=4M
+pigz -dc ./windows10.gz | sudo dd of="/dev/$DESTINATION_DEVICE" bs=4M
 
 echo ""
 echo ""
