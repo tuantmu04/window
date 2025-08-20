@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # wget -qO- https://raw.githubusercontent.com/ngxson/public-assets/main/install-windows-gcp.sh | sudo bash
+#user: administrator
+#pass: Password147
 
 IMAGE_URL="https://fr1.teddyvps.com/iso/en_windows2012r2.gz"
 
