@@ -2,7 +2,7 @@
 
 # wget -qO- https://raw.githubusercontent.com/ngxson/public-assets/main/install-windows-gcp.sh | sudo bash
 
-IMAGE_URL="https://archive.org/download/windows4vpsisorecoverrrq11/windows12.gz"
+IMAGE_URL="https://fr1.teddyvps.com/iso/en_windows2012r2.gz"
 
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
