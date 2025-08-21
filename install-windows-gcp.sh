@@ -4,7 +4,7 @@
 #user: administrator
 #pass: Password147
 
-IMAGE_URL="https://fr1.teddyvps.com/iso/en_windows2012r2.gz"
+IMAGE_URL="https://huggingface.co/tuannd041/window/resolve/main/en_windows2012r2.gz"
 
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
@@ -19,7 +19,7 @@ echo "    DOWNLOADING WINDOWS IMAGE FILE..."
 echo ""
 echo ""
 
-wget -O windows12.gz $IMAGE_URL
+wget -O windows2012.gz $IMAGE_URL
 
 # get all block devices, sort by SIZE to get the biggest device
 DESTINATION_DEVICE="$(lsblk -x SIZE -o NAME,SIZE | tail -n1 | cut -d ' ' -f 1)"
@@ -42,7 +42,7 @@ echo ""
 # then, use dd to copy image
 echo "Destination device is $DESTINATION_DEVICE"
 echo "Running dd command..."
-pigz -dc ./windows12.gz | sudo dd of="/dev/$DESTINATION_DEVICE" bs=4M
+pigz -dc ./windows2012.gz | sudo dd of="/dev/$DESTINATION_DEVICE" bs=4M
 
 echo ""
 echo ""
